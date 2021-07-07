@@ -1,0 +1,42 @@
+body{
+    /*font-family: 'Acme', sans-serif;*/
+    margin: 0;
+    padding: 0;
+    background-color: #330045;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+header {
+    background-color: #330045;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.imgagem-topo {
+    width: 70%;
+	padding-top: 40px;
+}
+
+h1{
+    font-size: 50px;
+    color: #BEB941;
+    margin-left: 40px;
+    margin-right: 60px;
+}
+
+.texto {
+    margin: 50px;
+    padding: 50px;
+    color: #C6C068;
+    font-size: 1.25em;
+}
+
+
+p {
+    margin: 0;
+    font-size: 16px;
+    color: #44281D;
+    text-transform: uppercase;
+}
