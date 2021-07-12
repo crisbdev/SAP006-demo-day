@@ -1,26 +1,23 @@
-import { example } from './data.js';
 
-import data from './data/rickandmorty/rickandmorty.js';
+import {  } from './data.js';
+ import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(data.results[0]);
-
-const cards = document.getElementById("cards")
-console.log(cards);
-
-let personagemUm = data.results[0];
-
-function createcard (personagem) {
-
-  const div = `
-    <div>
-      <img src="${personagem.image}">
+ function cardPersonagem(data){
+  document.getElementById("foto").innerHTML = data.map((personagem) =>
+  `<div> 
+      <div classe = imagem>
+        <img src = "${personagem.image}">
+      </div>
+      <div class = info>
+        <ul>
+        <li>Nome: ${personagem.name}</li>
+        <li>Status: ${personagem.status}</li>
+        <li>Gênero: ${personagem.gender}</li>
+       
+      </ul>
     </div>
-  `
-  return div;
+
+  </div>
+  `  )
 }
-
-let result = createcard(personagemUm);
-
-console.log(result);
-
-cards.innerHTML = result
+cardPersonagem(data.results)
