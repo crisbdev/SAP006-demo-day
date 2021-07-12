@@ -3,19 +3,63 @@
 
 <head>
   <meta charset="utf-8">
-
   <title>Rick and Morty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <title>Rick e Morty</title>
 </head>
 
 <body>
-  <div id="root"></div>
-
-
-  <section>
-    teste thalita
+  <section class="introducao">
+    <div class="container">
+      <h1>Rick and Morty</h1>
+      <blockquote class="quote-externo">
+        <p>
+          Rick and Morty (em português Rick e Morty) é uma série de animação adulta norte-americana de comédia e
+          ficção científica criada por Justin Roiland e Dan Harmon para o bloco de programação noturno Adult Swim, exibido no canal Cartoon Network.
+          A série se originou de uma paródia animada em curta-metragem do filme "De Volta Para o Futuro" criada por Roiland para o festival de cinema Channel 101. A Adult Swim abordou Harmon a respeito de ideias para um programa de televisão, então ele e Roiland desenvolveram o programa com base no curta, substituindo os personagens de Doc com Rick e Marty com Morty.
+        </p>
+      </blockquote>
   </section>
+  </div>
 
+  <nav id="filtro">
+    <ul id="selecao_filtro">
+      <li>
+        <select class="estilo" id="filtro_status">
+          <option value="none">Status</option>
+          <option value="Vivo">Vivo</option>
+          <option value="Morto">Morto</option>
+          <option value="Desconhecido">Desconhecido</option>
+        </select>
+      </li>
+      <li>
+        <select class="estilo" id="filtro_genero">
+          <option value="none">Genêro</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Sem Gênero">Sem Gênero</option>
+        </select>
+      </li>
+      <li>
+        <select class="estilo" id="filtro_sortby">
+          <option value="none">Sorte By</option>
+          <option value="a-z">Nome: A - Z</option>
+          <option value="z-a">Nome: Z - A</option>
+        </select>
+      </li>
+
+      <form action="">
+        <input type="search" id="search_personagens" placeholder="Digite o nome do personagem">
+        <button id="btn-enviar">search</button>
+
+      </form>
+    </ul>
+  </nav>
+
+  <div class="cards" id="foto">
+  </div>
 
   <script src="main.js" type="module"></script>
 </body>

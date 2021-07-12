@@ -1,0 +1,93 @@
+body {
+  font-family: "Yomogi", cursive;
+  background: #3b0273;
+}
+img {
+  display: block;
+  max-width: 100%; /* Para o design responsivo */
+}
+.introducao {
+  width: 100%;
+  height: 500px;
+  background: url("../img/intro.png") no-repeat center;
+  background-size: cover;
+  padding-top: 40px;
+}
+.introducao h1 {
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  font-size: 48px;
+  color: #d9d382;
+  text-align: center;
+  text-shadow: 10px 10px 10px #73020c;
+  text-transform: uppercase;
+}
+.introducao p {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  color: #d9d382;
+  padding-top: 40px;
+  font-weight: bold;
+  font-size: 21px;
+}
+.quote-externo p:before,
+.quote-externo p:after {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 3px;
+  background: #d9d382;
+  margin: 14px auto 10px auto;
+}
+
+#filtro ul {
+  margin-left: 410px;
+}
+
+#filtro ul li {
+  margin: 10px;
+  padding-bottom: 15px;
+  display: inline-block;
+  text-align: center;
+}
+
+.estilo {
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid;
+  border-radius: 5px 5px;
+  color: #d9d382;
+  background: rgb(206, 28, 206);
+  cursor: pointer;
+}
+#search_personagens {
+  margin-left: 57px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px 5px;
+  border: 2px solid #d9d382;
+  background: rgb(206, 28, 206);
+  cursor: pointer;
+  display: inline-block;
+}
+input::placeholder {
+  /*para mudar a fonte de dentro da caixa de pesquisa*/
+  color: #d9d382;
+  font-size: 14px;
+  text-align: center;
+}
+#btn-enviar {
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 5px 5px;
+  border: 2px solid #d9d382;
+  color: #d9d382;
+  background: rgb(206, 28, 206);
+  cursor: pointer;
+}
+.card {
+  object-fit: cover;
+  border: 3px solid;
+  background: #73020c;
+}
