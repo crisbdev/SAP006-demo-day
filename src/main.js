@@ -1,3 +1,4 @@
+
 import {  } from './data.js';
  import data from './data/rickandmorty/rickandmorty.js';
 
@@ -20,13 +21,3 @@ import {  } from './data.js';
   `  )
 }
 cardPersonagem(data.results)
- 
-
-
-
-
-
-
-
-
- 
