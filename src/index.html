@@ -11,8 +11,11 @@
 </head>
 
 <body>
-  <section class="introducao">
+  <section class="introducao" id="introducao">
     <div class="container">
+      <!---<div id="intro-img">
+        <img src="img/intro.png" alt="rickandmorty">
+      </div>-->
       <h1>Rick and Morty</h1>
       <blockquote class="quote-externo">
         <p>
@@ -43,23 +46,25 @@
         </select>
       </li>
       <li>
-        <select class="estilo" id="filtro_sortby">
-          <option value="none">Sorte By</option>
+        <select class="estilo" id="filtro_ordenar">
+          <option value="none">Ordenar</option>
           <option value="a-z">Nome: A - Z</option>
           <option value="z-a">Nome: Z - A</option>
         </select>
       </li>
 
-      <form action="">
+      <form class="form-pesquisa">
         <input type="search" id="search_personagens" placeholder="Digite o nome do personagem">
-        <button id="btn-enviar">search</button>
+        <button id="btn-pesquisar">Pesquisar</button>
 
       </form>
     </ul>
   </nav>
 
-  <div class="cards" id="foto">
-  </div>
+  <ul class="cards" id="foto">
+
+  </ul>
+
 
   <script src="main.js" type="module"></script>
 </body>
