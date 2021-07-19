@@ -20,25 +20,3 @@ function cardPersonagem(data) {
     .join("");
 }
 cardPersonagem(data.results);
-//const arrayTest = ["rick", "Summer", "Morty"];
-
-//const btnFiltrar = () => {
-//  const valorSelecionado = btnPesquisar.value;
-// const retornaValor = example(arrayTest);
-// cardPersonagem(retornaValor);
-//exemple()
-/*função do dataJS para filtrar personagens*/
-//};
-//const btnPesquisar = document.getElementById("btn-pesquisar");
-
-//btnPesquisar.addEventListener("click", btnFiltrar);
-
-//btnFiltrar.cardPersonagem(data.results);
-/*const filtro = document.querySelectorAll("li") pode ser usado em li
-usando o filter
-const dados = info.filter((dadoPerso) => {
-  console.log(dadosPerso.status);
-  o SORT usado em uma array serve para colocar em ordem alfabetica
-  o MAP retorna uma nova array com valores atualizados de acordo com o return de cada iteração.
-}); 
-*/
