@@ -1,5 +1,9 @@
-import {} from "./data.js";
-import data from "./data/rickandmorty/rickandmorty.js";
+import { filtrarPerson } from './data.js';
+
+import data from './data/rickandmorty/rickandmorty.js';
+
+const personsInfo = data.results;
+
 
 function cardPersonagem(data) {
   document.getElementById("foto").innerHTML = data
@@ -20,3 +24,19 @@ function cardPersonagem(data) {
     .join("");
 }
 cardPersonagem(data.results);
+
+
+
+// filter: Status
+
+const selectStatus = document.getElementById("filtro_status")
+selectStatus.addEventListener("change", (event) => {
+const selectOption = event.target.value
+console.log(selectOption);
+
+const chamaPersona = filtrarPerson(personsInfo, selectOption)
+cardPersonagem(chamaPersona)
+console.log(chamaPersona);
+})
+
+

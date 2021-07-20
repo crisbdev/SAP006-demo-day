@@ -1,14 +1,15 @@
-// estas funciones son de ejemplo
-
-//export const filterStatus = function filterDead(data, unknownStatus) {
-// return data.filter(lifeStatus => lifeStatus.lifeStatus === unknownStatus)
-//};
-
-import data from "./data/rickandmorty/rickandmorty.js";
-
-// criar função filter,sort//
-export const example = () => {
-  return "example";
+export const filtrarPerson = (personsInfo, selectOption) => {
+  const arrayFiltrado = personsInfo.filter(function (personagem) {
+    //console.log(personagem.status);
+    //console.log(personagem.status === selectOption);
+    if (personagem.status === selectOption) {
+      return personagem
+    }
+  })
+  return arrayFiltrado
+    //console.log(arrayFiltrado);
 };
 
-export const filtrarPersonagem = () => {};
+export const anotherExample = () => {
+  
+};
