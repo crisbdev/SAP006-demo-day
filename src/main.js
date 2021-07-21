@@ -1,15 +1,19 @@
-import { filtrarPerson } from './data.js';
+import { filterStatus } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
+
 const personsInfo = data.results;
+const selectStatus = document.getElementById("filtro_status");
+const selectSpecie = document.getElementById("filtro_especie");
+const selectGender = document.getElementById("filtro_genero");
+const selectOrder = document.getElementById("filtro_ordenar");
+
 
 
 function cardPersonagem(data) {
-  document.getElementById("foto").innerHTML = data
-    .map(
-      (personagem) =>
-        ` <li class = "container-card">
+  document.getElementById("foto").innerHTML = data.map((personagem) =>
+    ` <li class = "container-card">
       <div class = "imagem">
         <img src = "${personagem.image}">
       </div>
@@ -20,7 +24,7 @@ function cardPersonagem(data) {
      </p>
     </li>
   `
-    )
+  )
     .join("");
 }
 cardPersonagem(data.results);
@@ -29,14 +33,32 @@ cardPersonagem(data.results);
 
 // filter: Status
 
-const selectStatus = document.getElementById("filtro_status")
-selectStatus.addEventListener("change", (event) => {
-const selectOption = event.target.value
-console.log(selectOption);
 
-const chamaPersona = filtrarPerson(personsInfo, selectOption)
-cardPersonagem(chamaPersona)
-console.log(chamaPersona);
+selectStatus.addEventListener("change", (event) => {
+  const selectOption = event.target.value
+  const chamaPersona = filterStatus(personsInfo, selectOption, "status")
+  cardPersonagem(chamaPersona)
+
 })
 
+// filter: Specie
+
+selectSpecie.addEventListener("change", (event) => {
+  const selectOptionSpecie = event.target.value
+  const infoSpecie = filterStatus(personsInfo, selectOptionSpecie, "species")
+  cardPersonagem(infoSpecie)
+
+})
+
+// filter: Gender 
+
+selectGender.addEventListener("change", (event) => {
+  const selectOptionGender = event.target.value
+  const infoGender = filterStatus(personsInfo, selectOptionGender, "gender")
+  cardPersonagem(infoGender)
+
+  //console.log(infoGender);
+})
+
+// filter: Order
 

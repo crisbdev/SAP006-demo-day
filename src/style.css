@@ -24,9 +24,9 @@ body {
   font-family: Comic Sans MS;
   font-weight: bold;
   font-size: 48px;
-  color: #97ce4c;
+  color: #46cc89;
   text-align: center;
-  text-shadow: 10px 10px 10px #a6eee6ff;
+  text-shadow: 8px 8px 4px #27014d;
   text-transform: uppercase;
 }
 .introducao p {
@@ -67,9 +67,9 @@ input::placeholder {
 .container-card {
   width: 39%;
   margin-bottom: 1%;
-  background: #97ce4c;
+  background: #46cc89;
   border-radius: 20px;
-  box-shadow: 20px 20px 40px #a6eee6ff;
+  box-shadow: 10px 10px 20px #8bd1ae;
   display: flex;
   max-width: 1680px;
   min-width: 375px;
