@@ -24,9 +24,9 @@ body {
   font-family: Comic Sans MS;
   font-weight: bold;
   font-size: 48px;
-  color: #97ce4c;
+  color: #46cc89;
   text-align: center;
-  text-shadow: 10px 10px 10px #a6eee6ff;
+  text-shadow: 8px 8px 4px #27014d;
   text-transform: uppercase;
 }
 .introducao p {
@@ -47,54 +47,13 @@ body {
   margin: 14px auto 10px auto;
 }
 
-#filtro ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  margin-left: 410px;
-}
-
-#filtro ul li {
-  margin: 10px;
-  padding-bottom: 15px;
-  display: flex; /* usar display flex*/
-  text-align: center;
-}
-
-.estilo {
-  font-size: 16px;
-  font-weight: bold;
-  border: 2px solid;
-  border-radius: 5px 5px;
-  color: #d9d382;
-  background: rgb(206, 28, 206);
-  cursor: pointer;
-}
-#search_personagens {
-  margin-left: 57px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px 5px;
-  border: 2px solid #d9d382;
-  background: rgb(206, 28, 206);
-  cursor: pointer;
-  display: inline-block;
-}
 input::placeholder {
   /*para mudar a fonte de dentro da caixa de pesquisa*/
   color: #d9d382;
   font-size: 14px;
   text-align: center;
 }
-#btn-pesquisar {
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 5px 5px;
-  border: 2px solid #d9d382;
-  color: #d9d382;
-  background: rgb(206, 28, 206);
-  cursor: pointer;
-}
+
 * {
   box-sizing: border-box;
 }
@@ -108,10 +67,12 @@ input::placeholder {
 .container-card {
   width: 39%;
   margin-bottom: 1%;
-  background: #97ce4c;
+  background: #46cc89;
   border-radius: 20px;
-  box-shadow: 20px 20px 40px #a6eee6ff;
+  box-shadow: 10px 10px 20px #8bd1ae;
   display: flex;
+  max-width: 1680px;
+  min-width: 375px;
 }
 .imagem img {
   border-radius: 30px;
@@ -124,4 +85,75 @@ input::placeholder {
   margin: 10px;
   padding-top: 40px;
   font-weight: bold;
+}
+
+@media (max-width: 1440px){
+  #filtro ul {
+    display: flex;
+    /*margin-left: 360px;*/
+    margin: 0 auto;
+    width: 300px;
+  }
+  #filtro ul li {
+    display: block;
+    margin: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .estilo {
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 5px 5px;
+    color: #d9d382;
+    background: rgb(206, 28, 206);
+    cursor: pointer;
+  }
+  #filtro_ordenar{
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #search_personagens {
+    align-content: 1000px;
+    display: auto;
+    margin: auto;
+    width: auto;
+    justify-content: space-evenly;
+    font-size: center;
+    font-weight: bold;
+    border-radius: 5px 5px;
+    border: 2px solid #d9d382;
+    background: rgb(206, 28, 206);
+    cursor: pointer;
+    /*display: inline-block;*/
+  }
+  #btn-pesquisar {
+    display: inline-block;
+    margin: auto;
+    width: 200px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px 5px;
+    border: 2px solid #d9d382;
+    background: rgb(206, 28, 206);
+    cursor: pointer;
+  }
+  
+}
+
+@media (max-width: 299px){
+  #filtro ul {
+    display: block;
+  }
+  #filtro ul li {
+    display: block;
+    text-align: center;
+  }
+  #filtro_ordenar{
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }

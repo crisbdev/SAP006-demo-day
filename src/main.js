@@ -1,11 +1,19 @@
-import {} from "./data.js";
-import data from "./data/rickandmorty/rickandmorty.js";
+import { filterStatus } from './data.js';
+
+import data from './data/rickandmorty/rickandmorty.js';
+
+
+const personsInfo = data.results;
+const selectStatus = document.getElementById("filtro_status");
+const selectSpecie = document.getElementById("filtro_especie");
+const selectGender = document.getElementById("filtro_genero");
+const selectOrder = document.getElementById("filtro_ordenar");
+
+
 
 function cardPersonagem(data) {
-  document.getElementById("foto").innerHTML = data
-    .map(
-      (personagem) =>
-        ` <li class = "container-card">
+  document.getElementById("foto").innerHTML = data.map((personagem) =>
+    ` <li class = "container-card">
       <div class = "imagem">
         <img src = "${personagem.image}">
       </div>
@@ -16,29 +24,41 @@ function cardPersonagem(data) {
      </p>
     </li>
   `
-    )
+  )
     .join("");
 }
 cardPersonagem(data.results);
-//const arrayTest = ["rick", "Summer", "Morty"];
 
-//const btnFiltrar = () => {
-//  const valorSelecionado = btnPesquisar.value;
-// const retornaValor = example(arrayTest);
-// cardPersonagem(retornaValor);
-//exemple()
-/*função do dataJS para filtrar personagens*/
-//};
-//const btnPesquisar = document.getElementById("btn-pesquisar");
 
-//btnPesquisar.addEventListener("click", btnFiltrar);
 
-//btnFiltrar.cardPersonagem(data.results);
-/*const filtro = document.querySelectorAll("li") pode ser usado em li
-usando o filter
-const dados = info.filter((dadoPerso) => {
-  console.log(dadosPerso.status);
-  o SORT usado em uma array serve para colocar em ordem alfabetica
-  o MAP retorna uma nova array com valores atualizados de acordo com o return de cada iteração.
-}); 
-*/
+// filter: Status
+
+
+selectStatus.addEventListener("change", (event) => {
+  const selectOption = event.target.value
+  const chamaPersona = filterStatus(personsInfo, selectOption, "status")
+  cardPersonagem(chamaPersona)
+
+})
+
+// filter: Specie
+
+selectSpecie.addEventListener("change", (event) => {
+  const selectOptionSpecie = event.target.value
+  const infoSpecie = filterStatus(personsInfo, selectOptionSpecie, "species")
+  cardPersonagem(infoSpecie)
+
+})
+
+// filter: Gender 
+
+selectGender.addEventListener("change", (event) => {
+  const selectOptionGender = event.target.value
+  const infoGender = filterStatus(personsInfo, selectOptionGender, "gender")
+  cardPersonagem(infoGender)
+
+  //console.log(infoGender);
+})
+
+// filter: Order
+
