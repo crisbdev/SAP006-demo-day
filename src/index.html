@@ -13,9 +13,7 @@
 <body>
   <section class="introducao" id="introducao">
     <div class="container">
-      <!---<div id="intro-img">
-        <img src="img/intro.png" alt="rickandmorty">
-      </div>-->
+
       <h1>Rick and Morty</h1>
       <blockquote class="quote-externo">
         <p>
@@ -32,17 +30,17 @@
       <li>
         <select class="estilo" id="filtro_status">
           <option value="none">Status</option>
-          <option value="Vivo">Vivo</option>
-          <option value="Morto">Morto</option>
-          <option value="Desconhecido">Desconhecido</option>
+          <option value="alive">Vivo</option>
+          <option value="Dead">Morto</option>
+          <option value="unknown">Desconhecido</option>
         </select>
       </li>
       <li>
         <select class="estilo" id="filtro_genero">
           <option value="none">Genêro</option>
-          <option value="Feminino">Feminino</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Sem Gênero">Sem Gênero</option>
+          <option value="Female">Feminino</option>
+          <option value="Male">Masculino</option>
+          <option value="unknown">Sem Gênero</option>
         </select>
       </li>
       <li>
@@ -53,12 +51,14 @@
         </select>
       </li>
 
-      <form class="form-pesquisa">
-        <input type="search" id="search_personagens" placeholder="Digite o nome do personagem">
-        <button id="btn-pesquisar">Pesquisar</button>
-
       </form>
     </ul>
+
+    <form class="form-pesquisa">
+      <input type="search" id="search_personagens" placeholder="Digite o nome do personagem">
+      <button id="btn-pesquisar">Pesquisar</button>
+
+    </form>
   </nav>
 
   <ul class="cards" id="foto">
