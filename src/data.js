@@ -34,3 +34,22 @@ export const filterGender = (personsInfo, selectOptionGender) => {
     return arrayFiltradoGender
 
 };*/
+
+export const filterOrder = (personsInfo, selectOption) => {
+    if (selectOption === "a-z") {
+        return personsInfo.sort((a, b) => a.name > b.name ? 1 : -1);
+    } else if (selectOption === "z-a") {
+        return personsInfo.sort((a, b) => a.name > b.name ? -1 : 1);
+    }
+   
+}
+
+export const filterByName = (personsInfo, selectOption) => {
+    const arrayFiltradoByName= personsInfo.filter(function (personagem) {
+        if (personagem.name.includes(selectOption)) {
+            return personagem
+        }
+    })
+    return arrayFiltradoByName
+        
+} 

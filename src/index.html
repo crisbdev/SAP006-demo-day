@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Rick and Morty</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>Rick e Morty</title>
@@ -35,7 +35,7 @@
     <ul id="selecao_filtro">
       <li>
         <select class="estilo" id="filtro_status">
-          <option value="nune" selected disabled>Status</option>
+          <option value="none" selected disabled>Status</option>
           <option value="Alive">Vivo</option>
           <option value="Dead">Morto</option>
           <option value="unknown">Desconhecido</option>
@@ -43,7 +43,7 @@
       </li>
       <li>
         <select class="estilo" id="filtro_especie">
-          <option value="nune" selected disabled>Espécie</option>
+          <option value="none" selected disabled>Espécie</option>
           <option value="Human">Humano</option>
           <option value="Alien">Alien</option>
           <option value="Humanoid">Humanoide</option>
@@ -59,7 +59,7 @@
       </li>
       <li>
         <select class="estilo" id="filtro_genero">
-          <option value="nune" selected disabled>Gênero</option>
+          <option value="none" selected disabled>Gênero</option>
           <option value="Female">Feminino</option>
           <option value="Male">Masculino</option>
           <option value="unknown">Sem Gênero</option>
@@ -67,17 +67,15 @@
       </li>
       <li>
         <select class="estilo" id="filtro_ordenar">
-          <option value="nune" selected disabled>Ordenar</option>
+          <option value="none" selected disabled>Ordenar</option>
           <option value="a-z">Nome: A - Z</option>
           <option value="z-a">Nome: Z - A</option>
         </select>
       </li>
-
-      
+      <li>     
         <input class="estilo" type="search" id="search_personagens" placeholder="Procurar pelo nome">
         <button class="estilo" id="btn-pesquisar">Pesquisar</button>
-
-      
+      </li> 
     </ul>
   </nav>
 

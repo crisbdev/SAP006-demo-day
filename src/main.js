@@ -1,13 +1,16 @@
-import { filterStatus } from './data.js';
+import { filterStatus, filterOrder, filterByName } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
-
 const personsInfo = data.results;
+
 const selectStatus = document.getElementById("filtro_status");
 const selectSpecie = document.getElementById("filtro_especie");
 const selectGender = document.getElementById("filtro_genero");
-const selectOrder = document.getElementById("filtro_ordenar");
+const selectOrderAZ = document.getElementById("filtro_ordenar");
+const searchInput = document.getElementById("search_personagens");
+const searchButton = document.getElementById("btn-pesquisar");
+
 
 
 
@@ -20,7 +23,9 @@ function cardPersonagem(data) {
      <p class = "info">
           Nome: ${personagem.name} <br>
           Status: ${personagem.status} <br>
-          Gênero: ${personagem.gender}
+          Espécie: ${personagem.species} <br>
+          Gênero: ${personagem.gender} 
+          
      </p>
     </li>
   `
@@ -60,5 +65,24 @@ selectGender.addEventListener("change", (event) => {
   //console.log(infoGender);
 })
 
+
 // filter: Order
+
+selectOrderAZ.addEventListener("change", (event) => {
+  const selectOptionOrder = event.target.value
+  const infoOrder = filterOrder(personsInfo, selectOptionOrder, "a-z", "z-a")
+  cardPersonagem(infoOrder)
+
+})
+
+// search
+
+searchButton.addEventListener("click", function (){
+  const name = searchInput.value;
+  const personagensfiltrados = filterByName(personsInfo, name); 
+  cardPersonagem(personagensfiltrados)
+})
+
+    
+
 
