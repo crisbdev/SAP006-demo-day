@@ -87,3 +87,4 @@ Após essa pesquisa, disponibilizamos as informações mais relevantes para os u
 ## 6. Autoria
 
 Carla Keyse , Rafaela Cugini e Thalita Machado.
+<a href="https://github.com/carlakeyse" target="_blank">Carla Keyse</a>, <a href="https://github.com/RafaelaCugini" target="_blank">Rafaela Cugini</a> e <a href="https://github.com/Thalita1044" target="_blank">Thalita Machado</a>
