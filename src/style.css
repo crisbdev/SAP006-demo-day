@@ -108,37 +108,12 @@ body {
   cursor: pointer;
 }
 
-/*#filtro ul {
-  display: flex;
-  width: 115px;
-  height: 35px;
-}*/
-
 #filtro ul li {
   display: inline-block;
   font-size: 20px;
   padding: 20px;
  
 }  
-
-/*#filtro_ordenar{
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-
-  width: 115px;
-  height: 35px;
-}
-
-#search_personagens {
-  display: flex;
-  width: auto;
-  justify-content: space-evenly;
-
-  width: 115px;
-  height: 35px;
-}*/
 
 input::placeholder {
   /*para mudar a fonte de dentro da caixa de pesquisa*/
@@ -153,6 +128,20 @@ input::placeholder {
  
 }
 
+/*Cálculo*/
+
+.calculation {
+  color: white;
+  font-size: 25px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /*For iPads and Tablets:*/
+ [class*="col-"] {
+   width: 100%;
+  }
+}
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="col-"] {
@@ -175,4 +164,17 @@ input::placeholder {
   .col-s-12 {width: 100%;}
 }
 
-
+@media only screen and (max-width: 320px) {
+  .cards {
+    padding: 60px;
+    display: inline;
+    /*width: 100%;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-transform: uppercase;
+  }
+  #filtro {
+    text-align: center;
+    justify-content: center; 
+  }
+}

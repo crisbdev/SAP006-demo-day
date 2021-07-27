@@ -1,4 +1,4 @@
-import { filterStatus, filterOrder, filterByName } from './data.js';
+import { filterStatus, filterOrder, filterByName, calcAgregado } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
@@ -34,7 +34,12 @@ function cardPersonagem(data) {
 }
 cardPersonagem(data.results);
 
+//Cálculo de porcentagens
 
+function calculoResult(personsInfo, selectOption) {
+  let result = calcAgregado(personsInfo, selectOption)
+  document.getElementById("calculation").innerHTML = "Existem " + selectOption.length + " personagens deste filtro e representam " + result + "% do total de personagens"
+}
 
 // filter: Status
 
@@ -43,7 +48,7 @@ selectStatus.addEventListener("change", (event) => {
   const selectOption = event.target.value
   const chamaPersona = filterStatus(personsInfo, selectOption, "status")
   cardPersonagem(chamaPersona)
-
+  calculoResult(personsInfo, chamaPersona)
 })
 
 // filter: Specie
@@ -52,7 +57,7 @@ selectSpecie.addEventListener("change", (event) => {
   const selectOptionSpecie = event.target.value
   const infoSpecie = filterStatus(personsInfo, selectOptionSpecie, "species")
   cardPersonagem(infoSpecie)
-
+  calculoResult(personsInfo, infoSpecie)
 })
 
 // filter: Gender 
@@ -61,8 +66,7 @@ selectGender.addEventListener("change", (event) => {
   const selectOptionGender = event.target.value
   const infoGender = filterStatus(personsInfo, selectOptionGender, "gender")
   cardPersonagem(infoGender)
-
-  //console.log(infoGender);
+  calculoResult(personsInfo, infoGender)
 })
 
 
@@ -72,17 +76,18 @@ selectOrderAZ.addEventListener("change", (event) => {
   const selectOptionOrder = event.target.value
   const infoOrder = filterOrder(personsInfo, selectOptionOrder, "a-z", "z-a")
   cardPersonagem(infoOrder)
-
+  calculoResult(personsInfo, infoOrder)
 })
 
 // search
 
-searchButton.addEventListener("click", function (){
+searchButton.addEventListener("click", function () {
   const name = searchInput.value;
-  const personagensfiltrados = filterByName(personsInfo, name); 
+  const personagensfiltrados = filterByName(personsInfo, name);
   cardPersonagem(personagensfiltrados)
+  calculoResult(personsInfo, personagensfiltrados)
 })
 
-    
+
 
 
