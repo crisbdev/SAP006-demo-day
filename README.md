@@ -39,8 +39,16 @@ Informações relevantes sobre os personagens, como nome, gênero, espécie, loc
 
 Após essa pesquisa, disponibilizamos as informações mais relevantes para os usuários através de cards que permitem a visualização desses dados.
 
+### Interesses dos Usuários
+
+![História](src/img/Screen Shot 2021-07-27 at 13.37.08.png)
+![História](src/img/Screen Shot 2021-07-27 at 13.41.04.png)
+![História](src/img/Screen Shot 2021-07-27 at 13.41.24.png)
+![História](src/img/Screen Shot 2021-07-27 at 13.41.44.png)
+
 ## 4. Protótipo de Baixa Fidelidade
 
+![Protótipo.](src/img/rick_and_morty.gif)
 
 ## 5. Objetivos de aprendizagem
 
