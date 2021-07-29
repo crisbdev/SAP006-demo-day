@@ -41,13 +41,13 @@ Após essa pesquisa, disponibilizamos as informações mais relevantes para os u
 
 ### Interesses dos Usuários
 
-![História](.src/img/form1.png)
+![História](src/img/form1.png)
 
-![História](.src/img/form2.png)
+![História](src/img/form2.png)
 
-![História](.src/img/form3.png)
+![História](src/img/form3.png)
 
-![História](.src/img/form4.png)
+![História](src/img/form4.png)
 
 ## 4. Protótipo de Baixa Fidelidade
 
