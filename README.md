@@ -42,8 +42,11 @@ Após essa pesquisa, disponibilizamos as informações mais relevantes para os u
 ### Interesses dos Usuários
 
 ![História](src/img/Screen Shot 2021-07-27 at 13.37.08.png)
+
 ![História](src/img/Screen Shot 2021-07-27 at 13.41.04.png)
+
 ![História](src/img/Screen Shot 2021-07-27 at 13.41.24.png)
+
 ![História](src/img/Screen Shot 2021-07-27 at 13.41.44.png)
 
 ## 4. Protótipo de Baixa Fidelidade
