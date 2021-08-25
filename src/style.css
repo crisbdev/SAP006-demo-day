@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+  --azul: #B7E4F9;
+  --verde: #526E2D;
+  --marrom: #82491E;
+  --amarelo:#FAFD7C;
+  --branco: #FFFFFF;
+}
+
 body,
 h1,
 p,
@@ -9,7 +18,7 @@ li {
 
 body {
   font-family: "Yomogi", cursive;
-  background: #3b0273;
+  background: var(--amarelo);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -17,7 +26,6 @@ body {
 .intro {
   max-width: 100%;
   display: block;
-  background: url("./img/intro.png") no-repeat center;
   background-size: cover;
   padding-top: 40px;
 }
@@ -41,16 +49,6 @@ body {
   padding-top: 40px;
   font-weight: bold;
   font-size: 21px;
-}
-
-.external-quote p:before,
-.external-quote p:after {
-  content: "";
-  display: block;
-  width: 350px;
-  height: 3px;
-  background: #d9d382;
-  margin: 14px auto 10px auto;
 }
 
 /*Estilização dos cards*/
@@ -92,10 +90,6 @@ body {
 #filter {
   text-align: center;
   justify-content: center; 
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .select_style {
