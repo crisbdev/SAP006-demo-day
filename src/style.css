@@ -12,22 +12,39 @@
   text-transform: uppercase;
 }
 
+body,
+h1,
+p,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   font-family: "Yomogi", cursive;
   background: var(--preto);
+
   overflow-y: scroll;
   overflow-x: hidden;
-  margin: 0px;
-  padding: 0px;
 }
 
 header {
   background-color: var(--azul);
   color: var(--amarelo);
   height: 300px;
+  position: top;
 }
 
-nav {
+header img {
+  max-width: 1000px;
+}
+.black-line {
+  background-color: var(--preto);
+  height: 12px;
+  width: 100%;
+}
+.navbar-top {
   background: var(--amarelo);
   color: var(--preto);
 }
@@ -37,7 +54,7 @@ li {
   padding: 15px;
 }
 
-a {
+.navbar-top-item {
   color: var(--preto);
   font-size: 20px;
   font-weight: 700;
@@ -58,18 +75,6 @@ a {
   display: block;
   background-size: cover;
   padding-top: 40px;
-}
-
-.intro h1 {
-  max-width: 100%;
-  display: block;
-  font-family: Comic Sans MS;
-  font-weight: bold;
-  font-size: 48px;
-  color: #46cc89;
-  text-align: center;
-  text-shadow: 8px 8px 4px #27014d;
-  text-transform: uppercase;
 }
 
 .intro p {
@@ -185,14 +190,28 @@ footer {
   margin: 0 5px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-
+footer h3 {
+  padding: 5px;
+  color: var(--preto);
+}
+.social-media-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer a {
+  padding: 5px;
+}
 .footer-icon {
+  padding: inherit;
   width: 20px;
+  height: 20px;
 }
 
 @media only screen and (max-width: 768px) {
+
   /*For iPads and Tablets:*/
   [class*="col-"] {
     width: 100%;
@@ -213,6 +232,7 @@ footer {
     justify-content: space-around;
     text-transform: uppercase;
   }
+
   #filter {
     text-align: center;
     justify-content: center;
