@@ -12,11 +12,10 @@
 </head>
 
 <body>
-  <section class="introducao" id="introducao">
+  <section class="intro" id="intro">
     <div class="container">
-      
-      <h1>Rick and Morty</h1>
-      <blockquote class="quote-externo">
+     <h1>Rick and Morty</h1>
+      <blockquote class="external-quote">
         <p>
           Rick and Morty (em português Rick e Morty) é uma série de animação adulta norte-americana de comédia e
           ficção científica criada por Justin Roiland e Dan Harmon para o bloco de programação noturno Adult Swim,
@@ -33,22 +32,21 @@
       </blockquote>
     </div>
   </section>
-  
 
-  <nav id="filtro">
-    <ul id="selecao_filtro">
+  <nav id="filter">
+    <ul id="select_filter">
       <li>
-        <select class="estilo" id="filtro_status">
+        <select class="select_style" id="filter_status">
           <option value="none" selected disabled>Status</option>
-          <option value="Alive">Vivo</option>
-          <option value="Dead">Morto</option>
-          <option value="unknown">Desconhecido</option>
+          <option value="Vivo(a)">Vivo</option>
+          <option value="Morto(a)">Morto</option>
+          <option value="Desconhecido">Desconhecido</option>
         </select>
       </li>
       <li>
-        <select class="estilo" id="filtro_especie">
+        <select class="select_style" id="filter_specie">
           <option value="none" selected disabled>Espécie</option>
-          <option value="Human">Humano</option>
+          <option value="Humano(a)">Humano(a)</option>
           <option value="Alien">Alien</option>
           <option value="Humanoid">Humanoide</option>
           <option value="Poopybutthole">Poopybutthole</option>
@@ -62,29 +60,30 @@
         </select>
       </li>
       <li>
-        <select class="estilo" id="filtro_genero">
+        <select class="select_style" id="filter_gender">
           <option value="none" selected disabled>Gênero</option>
-          <option value="Female">Feminino</option>
-          <option value="Male">Masculino</option>
-          <option value="unknown">Sem Gênero</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Agênero">Agênero</option>
+          <option value="Desconhecido">Desconhecido</option>
         </select>
       </li>
       <li>
-        <select class="estilo" id="filtro_ordenar">
+        <select class="select_style" id="filter_order">
           <option value="none" selected disabled>Ordenar</option>
           <option value="a-z">Nome: A - Z</option>
           <option value="z-a">Nome: Z - A</option>
         </select>
       </li>
       <li>     
-        <input class="estilo" type="search" id="search_personagens" placeholder="Procurar pelo nome">
-        <button class="estilo" id="btn-pesquisar">Pesquisar</button>
+        <input class="select_style" type="search" id="search_char" placeholder="Procurar pelo nome">
+        <button class="select_style" id="btn-search">Pesquisar</button>
       </li>
-      <p id="calculation" class="calculation"></p>
+      <p id="calculation" class="calc"></p>
     </ul>
   </nav>
   
-  <ul class="cards" id="foto">
+  <ul class="cards" id="photo">
 
   </ul>
 

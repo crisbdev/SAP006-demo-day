@@ -1,43 +1,42 @@
-import { filterStatus, filterOrder, filterByName, calcAgregado } from './data.js';
+import { filterStatus, filterOrder, filterByName, percentageCalc } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
-const personsInfo = data.results;
+const charInfo = data.results;
 
-const selectStatus = document.getElementById("filtro_status");
-const selectSpecie = document.getElementById("filtro_especie");
-const selectGender = document.getElementById("filtro_genero");
-const selectOrderAZ = document.getElementById("filtro_ordenar");
-const searchInput = document.getElementById("search_personagens");
-const searchButton = document.getElementById("btn-pesquisar");
-
-
+const selectStatus = document.getElementById("filter_status");
+const selectSpecie = document.getElementById("filter_specie");
+const selectGender = document.getElementById("filter_gender");
+const selectOrderAZ = document.getElementById("filter_order");
+const searchInput = document.getElementById("search_char");
+const searchButton = document.getElementById("btn-search");
 
 
-function cardPersonagem(data) {
-  document.getElementById("foto").innerHTML = data.map((personagem) =>
-    ` <li class = "container-card">
-      <div class = "imagem">
-        <img src = "${personagem.image}">
+
+
+function cardChar(data) {
+  document.getElementById("photo").innerHTML = data.map((character) =>
+    ` <li class="container-card">
+      <div class="card-image">
+        <img src="${character.image}">
       </div>
-     <p class = "info">
-          Nome: ${personagem.name} <br>
-          Status: ${personagem.status} <br>
-          Espécie: ${personagem.species} <br>
-          Gênero: ${personagem.gender} 
-          
+     <p class="info">
+          Nome: ${character.name} <br>
+          Status: ${character.status} <br>
+          Espécie: ${character.species} <br>
+          Gênero: ${character.gender} 
      </p>
     </li>
   `
   )
     .join("");
 }
-cardPersonagem(data.results);
+cardChar(data.results);
 
 //Cálculo de porcentagens
 
-function calculoResult(personsInfo, selectOption) {
-  let result = calcAgregado(personsInfo, selectOption)
+function calcResult(charInfo, selectOption) {
+  let result = percentageCalc(charInfo, selectOption)
   document.getElementById("calculation").innerHTML = "Existem " + selectOption.length + " personagens deste filtro e representam " + result + "% do total de personagens"
 }
 
@@ -46,27 +45,27 @@ function calculoResult(personsInfo, selectOption) {
 
 selectStatus.addEventListener("change", (event) => {
   const selectOption = event.target.value
-  const chamaPersona = filterStatus(personsInfo, selectOption, "status")
-  cardPersonagem(chamaPersona)
-  calculoResult(personsInfo, chamaPersona)
+  const infoStatus = filterStatus(charInfo, selectOption, "status")
+  cardChar(infoStatus)
+  calcResult(charInfo, infoStatus)
 })
 
 // filter: Specie
 
 selectSpecie.addEventListener("change", (event) => {
   const selectOptionSpecie = event.target.value
-  const infoSpecie = filterStatus(personsInfo, selectOptionSpecie, "species")
-  cardPersonagem(infoSpecie)
-  calculoResult(personsInfo, infoSpecie)
+  const infoSpecie = filterStatus(charInfo, selectOptionSpecie, "species")
+  cardChar(infoSpecie)
+  calcResult(charInfo, infoSpecie)
 })
 
 // filter: Gender 
 
 selectGender.addEventListener("change", (event) => {
   const selectOptionGender = event.target.value
-  const infoGender = filterStatus(personsInfo, selectOptionGender, "gender")
-  cardPersonagem(infoGender)
-  calculoResult(personsInfo, infoGender)
+  const infoGender = filterStatus(charInfo, selectOptionGender, "gender")
+  cardChar(infoGender)
+  calcResult(charInfo, infoGender)
 })
 
 
@@ -74,18 +73,18 @@ selectGender.addEventListener("change", (event) => {
 
 selectOrderAZ.addEventListener("change", (event) => {
   const selectOptionOrder = event.target.value
-  const infoOrder = filterOrder(personsInfo, selectOptionOrder, "a-z", "z-a")
-  cardPersonagem(infoOrder)
-  calculoResult(personsInfo, infoOrder)
+  const infoOrder = filterOrder(charInfo, selectOptionOrder, "a-z", "z-a")
+  cardChar(infoOrder)
+  
 })
 
 // search
 
 searchButton.addEventListener("click", function () {
   const name = searchInput.value;
-  const personagensfiltrados = filterByName(personsInfo, name);
-  cardPersonagem(personagensfiltrados)
-  calculoResult(personsInfo, personagensfiltrados)
+  const filteredChar = filterByName(charInfo, name);
+  cardChar(filteredChar)
+  calcResult(charInfo, filteredChar)
 })
 
 
