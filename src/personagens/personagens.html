@@ -6,85 +6,103 @@
   <title>Rick and Morty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
-  <link rel="stylesheet" href="../style.css"/>
-  <title>Rick e Morty</title>
+  <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>Pickle Wiki</title>
 </head>
 
 <body>
   <header>
+
+  </header>
+
+  <nav class="toUpperCase">
+    <ul class="flexBox">
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+      <li>
+        <a href="./personagens.html">Personagens</a>
+      </li>
+      <li>
+        <a href="../curiosidades/curiosidades.html">Curiosidades</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="filter">
+    <select class="select_style" id="filter_status">
+      <option value="none" selected disabled>Status</option>
+      <option value="Vivo(a)">Vivo</option>
+      <option value="Morto(a)">Morto</option>
+      <option value="Desconhecido">Desconhecido</option>
+    </select>
+
+    <select class="select_style" id="filter_specie">
+      <option value="none" selected disabled>Espécie</option>
+      <option value="Humano(a)">Humano(a)</option>
+      <option value="Alien">Alien</option>
+      <option value="Humanoid">Humanoide</option>
+      <option value="Poopybutthole">Poopybutthole</option>
+      <option value="Mytholog">Mitológico</option>
+      <option value="Vampire">Vampiro</option>
+      <option value="Robot">Robô</option>
+      <option value="Cronenberg">Cronenberg</option>
+      <option value="Disease">Doença</option>
+      <option value="Parasite">Parasita</option>
+      <option value="unknown">Desconhecido</option>
+    </select>
+
+    <select class="select_style" id="filter_gender">
+      <option value="none" selected disabled>Gênero</option>
+      <option value="Feminino">Feminino</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Agênero">Agênero</option>
+      <option value="Desconhecido">Desconhecido</option>
+    </select>
+
+    <select class="select_style" id="filter_order">
+      <option value="none" selected disabled>Ordenar</option>
+      <option value="a-z">Nome: A - Z</option>
+      <option value="z-a">Nome: Z - A</option>
+    </select>
+
+    <p id="calculation" class="calc"></p>
+  </section>
+
+  <section class="flexBox">
+    <input class="select_style" type="search" id="search_char" placeholder="Procurar pelo nome">
+    <button class="searchButton" id="btn-search"><img src="../img/search.png" /></button>
+  </section>
+
+  <main class="cards" id="photo">
+
+  </main>
+
+  <footer>
     <nav>
       <ul>
         <li>
-          <a href="../index.html">Home</a>
-        </li>  
-        <li>
-          <a href="./personagens.html">Personagens</a>
+          <a href="https://github.com/fulana" name="github-fulana"><i class="footer-icon" src=""></i></a>
         </li>
         <li>
-          <a href="../curiosidades/curiosidades.html">Curiosidades</a>
+          <a href="https://github.com/fulana" name="github-fulana"><i class="footer-icon" src=""></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/fulana" name="github-fulana"><i class="footer-icon" src=""></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/fulana" name="github-fulana"><i class="footer-icon" src=""></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/fulana" name="github-fulana"><i class="footer-icon" src=""></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/fulana" name="github-fulana"><i class="footer-icon" src=""></i></a>
         </li>
       </ul>
     </nav>
-  </header>
-
-  <nav id="filter">
-    <ul id="select_filter">
-      <li>
-        <select class="select_style" id="filter_status">
-          <option value="none" selected disabled>Status</option>
-          <option value="Vivo(a)">Vivo</option>
-          <option value="Morto(a)">Morto</option>
-          <option value="Desconhecido">Desconhecido</option>
-        </select>
-      </li>
-      <li>
-        <select class="select_style" id="filter_specie">
-          <option value="none" selected disabled>Espécie</option>
-          <option value="Humano(a)">Humano(a)</option>
-          <option value="Alien">Alien</option>
-          <option value="Humanoid">Humanoide</option>
-          <option value="Poopybutthole">Poopybutthole</option>
-          <option value="Mytholog">Mitológico</option>
-          <option value="Vampire">Vampiro</option>
-          <option value="Robot">Robô</option>
-          <option value="Cronenberg">Cronenberg</option>
-          <option value="Disease">Doença</option>
-          <option value="Parasite">Parasita</option>
-          <option value="unknown">Desconhecido</option>
-        </select>
-      </li>
-      <li>
-        <select class="select_style" id="filter_gender">
-          <option value="none" selected disabled>Gênero</option>
-          <option value="Feminino">Feminino</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Agênero">Agênero</option>
-          <option value="Desconhecido">Desconhecido</option>
-        </select>
-      </li>
-      <li>
-        <select class="select_style" id="filter_order">
-          <option value="none" selected disabled>Ordenar</option>
-          <option value="a-z">Nome: A - Z</option>
-          <option value="z-a">Nome: Z - A</option>
-        </select>
-      </li>
-      <li>     
-        <input class="select_style" type="search" id="search_char" placeholder="Procurar pelo nome">
-        <button class="select_style" id="btn-search">Pesquisar</button>
-      </li>
-      <p id="calculation" class="calc"></p>
-    </ul>
-  </nav>
-  
-  <ul class="cards" id="photo">
-
-  </ul>
-  
-<footer>
-
-</footer>
+  </footer>
 
   <script src="../main.js" type="module"></script>
 </body>

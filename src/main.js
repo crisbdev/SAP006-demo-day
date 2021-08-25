@@ -11,81 +11,66 @@ const selectOrderAZ = document.getElementById("filter_order");
 const searchInput = document.getElementById("search_char");
 const searchButton = document.getElementById("btn-search");
 
-
-
-
 function cardChar(data) {
   document.getElementById("photo").innerHTML = data.map((character) =>
-    ` <li class="container-card">
-      <div class="card-image">
-        <img src="${character.image}">
-      </div>
-     <p class="info">
-          Nome: ${character.name} <br>
-          Status: ${character.status} <br>
-          Espécie: ${character.species} <br>
-          Gênero: ${character.gender} 
-     </p>
-    </li>
+    ` 
+    
+      <section class="container-card">
+        <div class="card-image">
+          <img src="${character.image}">
+        </div>
+        <dl class="cardsInfo">
+            <dt> Nome: ${character.name} </dt>
+            <dt> Status: ${character.status} </dt>
+            <dt> Espécie: ${character.species} </dt>
+            <dt> Gênero: ${character.gender} </dt>
+        </dl>
+      </section>
+    
   `
   )
     .join("");
 }
 cardChar(data.results);
 
-//Cálculo de porcentagens
-
 function calcResult(charInfo, selectOption) {
   let result = percentageCalc(charInfo, selectOption)
   document.getElementById("calculation").innerHTML = "Existem " + selectOption.length + " personagens deste filtro e representam " + result + "% do total de personagens"
 }
 
-// filter: Status
-
-
 selectStatus.addEventListener("change", (event) => {
-  const selectOption = event.target.value
-  const infoStatus = filterStatus(charInfo, selectOption, "status")
-  cardChar(infoStatus)
-  calcResult(charInfo, infoStatus)
-})
-
-// filter: Specie
+  const selectOption = event.target.value;
+  const infoStatus = filterStatus(charInfo, selectOption, "status");
+  cardChar(infoStatus);
+  calcResult(charInfo, infoStatus);
+});
 
 selectSpecie.addEventListener("change", (event) => {
-  const selectOptionSpecie = event.target.value
-  const infoSpecie = filterStatus(charInfo, selectOptionSpecie, "species")
-  cardChar(infoSpecie)
-  calcResult(charInfo, infoSpecie)
-})
-
-// filter: Gender 
+  const selectOptionSpecie = event.target.value;
+  const infoSpecie = filterStatus(charInfo, selectOptionSpecie, "species");
+  cardChar(infoSpecie);
+  calcResult(charInfo, infoSpecie);
+});
 
 selectGender.addEventListener("change", (event) => {
-  const selectOptionGender = event.target.value
-  const infoGender = filterStatus(charInfo, selectOptionGender, "gender")
-  cardChar(infoGender)
-  calcResult(charInfo, infoGender)
-})
-
-
-// filter: Order
+  const selectOptionGender = event.target.value;
+  const infoGender = filterStatus(charInfo, selectOptionGender, "gender");
+  cardChar(infoGender);
+  calcResult(charInfo, infoGender);
+});
 
 selectOrderAZ.addEventListener("change", (event) => {
-  const selectOptionOrder = event.target.value
-  const infoOrder = filterOrder(charInfo, selectOptionOrder, "a-z", "z-a")
-  cardChar(infoOrder)
-  
-})
-
-// search
+  const selectOptionOrder = event.target.value;
+  const infoOrder = filterOrder(charInfo, selectOptionOrder, "a-z", "z-a");
+  cardChar(infoOrder);
+});
 
 searchButton.addEventListener("click", function () {
   const name = searchInput.value;
   const filteredChar = filterByName(charInfo, name);
-  cardChar(filteredChar)
-  calcResult(charInfo, filteredChar)
-})
+  cardChar(filteredChar);
+  calcResult(charInfo, filteredChar);
+});
 
 
 
