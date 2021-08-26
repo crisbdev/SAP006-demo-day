@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="shortcut icon" href="../img/pickleFavicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>Pickle Wiki</title>
+</head>
+
+<body>
+  <header class="flexBox">
+    <img class="logo" src="../img/logoP.png" width="30%" alt="Pickle Wiki">
+  </header>
+
+  <nav class="toUpperCase navbar flexBox">
+    <ul class="navbar-list">
+      <li class="navbar-item-button">
+        <button class="navbar-button">
+          <img src="../img/iconMenu.png" width="50px" />
+        </button>
+      </li>
+      <li class="navbar-item">
+        <a href="../index.html">Home</a>
+      </li>
+      <li class="navbar-item">
+        <a href="./personagens.html">Personagens</a>
+      </li>
+      <li class="navbar-item">
+        <a href="../curiosidades/curiosidades.html">Curiosidades</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="blue-line"></section>
+
+  <section id="filter">
+    <select class="select_style" id="filter_status">
+      <option value="none" selected disabled>Status</option>
+      <option value="Vivo(a)">Vivo</option>
+      <option value="Morto(a)">Morto</option>
+      <option value="Desconhecido">Desconhecido</option>
+    </select>
+
+    <select class="select_style" id="filter_specie">
+      <option value="none" selected disabled>Espécie</option>
+      <option value="Humano(a)">Humano(a)</option>
+      <option value="Alien">Alien</option>
+      <option value="Humanoid">Humanoide</option>
+      <option value="Poopybutthole">Poopybutthole</option>
+      <option value="Mytholog">Mitológico</option>
+      <option value="Vampire">Vampiro</option>
+      <option value="Robot">Robô</option>
+      <option value="Cronenberg">Cronenberg</option>
+      <option value="Disease">Doença</option>
+      <option value="Parasite">Parasita</option>
+      <option value="unknown">Desconhecido</option>
+    </select>
+
+    <select class="select_style" id="filter_gender">
+      <option value="none" selected disabled>Gênero</option>
+      <option value="Feminino">Feminino</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Agênero">Agênero</option>
+      <option value="Desconhecido">Desconhecido</option>
+    </select>
+
+    <select class="select_style" id="filter_order">
+      <option value="none" selected disabled>Ordenar</option>
+      <option value="a-z">Nome: A - Z</option>
+      <option value="z-a">Nome: Z - A</option>
+    </select>
+
+    <p id="calculation" class="calc"></p>
+  </section>
+
+  <section class="flexBox">
+    <input class="select_style" type="search" id="search_char" placeholder="Procurar pelo nome">
+    <button class="searchButton" id="btn-search"><img src="../img/search.png" /></button>
+  </section>
+
+  <main class="cards" id="photo">
+
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="../main.js" type="module"></script>
+  <script src="../hamburger.js" type="module"></script>
+</body>
+
+</html>

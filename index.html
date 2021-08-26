@@ -3,93 +3,84 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Rick and Morty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"/>
-  <link rel="stylesheet" href="style.css" />
-  <title>Rick e Morty</title>
+  <link rel="shortcut icon" href="./img/pickleFavicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Pickle Wiki</title>
 </head>
 
 <body>
-  <section class="introducao" id="introducao">
-    <div class="container">
-      
-      <h1>Rick and Morty</h1>
-      <blockquote class="quote-externo">
-        <p>
-          Rick and Morty (em português Rick e Morty) é uma série de animação adulta norte-americana de comédia e
-          ficção científica criada por Justin Roiland e Dan Harmon para o bloco de programação noturno Adult Swim,
-          exibido no canal Cartoon Network.
-          A série se originou de uma paródia animada em curta-metragem do filme "De Volta Para o Futuro" criada por
-          Roiland para o festival de cinema Channel 101. A Adult Swim abordou Harmon a respeito de ideias para um
-          programa de televisão, então ele e Roiland desenvolveram o programa com base no curta, substituindo os
-          personagens de Doc com Rick e Marty com Morty.
-          <br>
-          Abaixo você poderá saber um pouco mais sobre os personagens da série.
-          <br>
-          Divirta-se!
-        </p>
-      </blockquote>
-    </div>
-  </section>
-  
+  <header class="flexBox">
+    <img class="logo" src="../img/logoP.png" width="30%" alt="Pickle Wiki">
+  </header>
 
-  <nav id="filtro">
-    <ul id="selecao_filtro">
-      <li>
-        <select class="estilo" id="filtro_status">
-          <option value="none" selected disabled>Status</option>
-          <option value="Alive">Vivo</option>
-          <option value="Dead">Morto</option>
-          <option value="unknown">Desconhecido</option>
-        </select>
+  <nav class="toUpperCase navbar flexBox">
+    <ul class="navbar-list">
+      <li class="navbar-item-button">
+        <button class="navbar-button">
+          <img src="img/iconMenu.png" width="50px" />
+        </button>
       </li>
-      <li>
-        <select class="estilo" id="filtro_especie">
-          <option value="none" selected disabled>Espécie</option>
-          <option value="Human">Humano</option>
-          <option value="Alien">Alien</option>
-          <option value="Humanoid">Humanoide</option>
-          <option value="Poopybutthole">Poopybutthole</option>
-          <option value="Mytholog">Mitológico</option>
-          <option value="Vampire">Vampiro</option>
-          <option value="Robot">Robô</option>
-          <option value="Cronenberg">Cronenberg</option>
-          <option value="Disease">Doença</option>
-          <option value="Parasite">Parasita</option>
-          <option value="unknown">Desconhecido</option>
-        </select>
+      <li class="navbar-item">
+        <a href="./index.html">Home</a>
       </li>
-      <li>
-        <select class="estilo" id="filtro_genero">
-          <option value="none" selected disabled>Gênero</option>
-          <option value="Female">Feminino</option>
-          <option value="Male">Masculino</option>
-          <option value="unknown">Sem Gênero</option>
-        </select>
+      <li class="navbar-item">
+        <a href="./personagens/personagens.html">Personagens</a>
       </li>
-      <li>
-        <select class="estilo" id="filtro_ordenar">
-          <option value="none" selected disabled>Ordenar</option>
-          <option value="a-z">Nome: A - Z</option>
-          <option value="z-a">Nome: Z - A</option>
-        </select>
+      <li class="navbar-item">
+        <a href="./curiosidades/curiosidades.html">Curiosidades</a>
       </li>
-      <li>     
-        <input class="estilo" type="search" id="search_personagens" placeholder="Procurar pelo nome">
-        <button class="estilo" id="btn-pesquisar">Pesquisar</button>
-      </li>
-      <p id="calculation" class="calculation"></p>
     </ul>
   </nav>
-  
-  <ul class="cards" id="foto">
 
-  </ul>
+  <section class="blue-line"></section>
 
+  <section class="intro" id="intro">
+    <div class="container">
+      <div class="textContent">
 
-  <script src="main.js" type="module"></script>
+        <p>
+          Rick e Morty se tornou uma das maiores animações do mundo, por juntar um grupo massivo de fãs ao longo de suas
+          temporadas. A animação tem uma temática bem diferente, mostrando um humor ácido misturado com ficção
+          científica
+          e pensamentos da filosofia existencialista. Na Pickle Wiki você consegue viajar através do multiverso
+          fantástico, juntamente com o Rick, um cientista beberrão, e Morty, um adolescente enfrentando os seus medos e
+          vivendo os problemas da puberdade.
+        </p>
+        <div class="flexBox">
+          <img src="img/rick-and-morty-rick.gif">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blue-line"></section>
+
+  <footer>
+    <nav class="social-media-navbar">
+      <h3>Desenvolvido por:</h3>
+      <a href="https://github.com/carlakeyse" target="_blank" name="github-carla">Carla Keyse
+        <img class="footer-icon" src="./img/github-icon.png">
+      </a>
+      <a href="https://github.com/crisbdev" target="_blank" name="github-cris">Cris Bezerra
+        <img class="footer-icon" src="./img/github-icon.png">
+      </a>
+      <a href="https://github.com/Giuthamie" target="_blank" name="github-giuliana">Giuliana Thamiê
+        <img class="footer-icon" src="./img/github-icon.png">
+      </a>
+      <a href="https://github.com/lyandrasaito" target="_blank" name="github-lyandra">Lyandra Saito
+        <img class="footer-icon" src="./img/github-icon.png">
+      </a>
+      <a href="https://github.com/thaianecristine" target="_blank" name="github-thaiane">Thaiane Cristine
+        <img class="footer-icon" src="./img/github-icon.png">
+      </a>
+      <a href="https://github.com/Thalita1044" target="_blank" name="github-thalita">Thalita Machado
+        <img class="footer-icon" src="./img/github-icon.png">
+      </a>
+    </nav>
+  </footer>
+
+  <script src="./hamburger.js" type="module"></script>
 </body>
 
 </html>

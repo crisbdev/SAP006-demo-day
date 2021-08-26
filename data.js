@@ -1,33 +1,33 @@
 
 // Função para Filtrar "Status", "Espécie" e "Gênero"
-export const filterStatus = (personsInfo, selectOption, type) => {
-    const arrayFiltrado = personsInfo.filter(function (personagem) {
-        if (personagem[type] === selectOption) {
-            return personagem
+export const filterStatus = (charInfo, selectOption, type) => {
+    const arrayFiltrado = charInfo.filter(function (character) {
+        if (character[type] === selectOption) {
+            return character
         }
     })
     return arrayFiltrado
 };
 
 // Função para Ordenar de "A - Z" e de "Z - A"
-export const filterOrder = (personsInfo, selectOption) => {
+export const filterOrder = (charInfo, selectOption) => {
     if (selectOption === "a-z") {
-        return personsInfo.sort((a, b) => a.name > b.name ? 1 : -1);
+        return charInfo.sort((a, b) => a.name > b.name ? 1 : -1);
     } else if (selectOption === "z-a") {
-        return personsInfo.sort((a, b) => a.name > b.name ? -1 : 1);
+        return charInfo.sort((a, b) => a.name > b.name ? -1 : 1);
     }
 }
 
 // Função para filtrar pelo Nome
-export const filterByName = (personsInfo, selectOption) => {
-    const arrayFiltradoByName = personsInfo.filter(function (personagem) {
-        if (personagem.name.toLowerCase().includes(selectOption.toLowerCase())) {
-            return personagem
+export const filterByName = (charInfo, selectOption) => {
+    const arrayFilteredByName = charInfo.filter(function (character) {
+        if (character.name.toLowerCase().includes(selectOption.toLowerCase())) {
+            return character
         }
     })
-    return arrayFiltradoByName
+    return arrayFilteredByName
 }
 
 // Função para exibir porcentagens dos personagens
-export const calcAgregado = (personsInfo, selectOption) =>
-    parseFloat((selectOption.length * 100) / personsInfo.length).toFixed(2);
+export const percentageCalc = (charInfo, selectOption) =>
+    parseFloat((selectOption.length * 100) / charInfo.length).toFixed(2);
