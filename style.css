@@ -45,10 +45,12 @@ header {
 nav {
   background: var(--amarelo);
   color: var(--preto);
+  width: 100%;
 }
 
 .navbar {
   background-color: var(--amarelo);
+  width: 100%;
 }
 
 .navbar-list {
@@ -102,7 +104,7 @@ a {
   margin-top: 4%;
 }
 
-.assista{
+.assista {
   margin-top: 3%;
   margin-bottom: 3%;
 }
@@ -236,7 +238,6 @@ input::placeholder {
 footer {
   background-color: var(--amarelo);
   color: var(--amarelo);
-  margin: 0 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -253,6 +254,11 @@ footer h4 {
   justify-content: space-between;
 }
 
+.social-media-navbar {
+  text-align: center;
+}
+
+
 footer a {
   padding: 5px;
 }
@@ -262,88 +268,11 @@ footer a {
   width: 30px;
 }
 
-iframe{
+iframe {
   margin-bottom: 20px;
 }
 
-/*
-@media only screen and (max-width: 768px) {
-  [class*="col-"] {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .intro {
-    background: #3b0273;
-  }
-}
-*/
-
-/*
-@media screen and (max-width: 500px) {
-  .navbar-list {
-    flex-direction: column;
-  }
-  .navbar-item-button {
-    list-style: none;
-    padding: 10px 10px;
-    display: inline-block;
-    align-self: flex-end;
-  }
-  .navbar-button {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-  }
-  .navbar-item {
-    display: none;
-  }
-  .navbar-item.show {
-    display: inline-block;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .cards {
-    padding: 60px;
-    display: inline;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-transform: uppercase;
-  }
-  #filter {
-    text-align: center;
-    justify-content: center;
-  }
-}*/
-
-@media (max-width:320px) {
-  .navbar-list {
-    flex-direction: column;
-  }
-  .navbar-item-button {
-    list-style: none;
-    padding: 10px 10px;
-    display: inline-block;
-    align-self: flex-end;
-  }
-  .navbar-button {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-  }
-  .navbar-item {
-    display: none;
-  }
-  .navbar-item.show {
-    display: inline-block;
-  }
-}
-
-@media (max-width:480px) {
+@media screen and (max-width: 738px) {
   .navbar-list {
     flex-direction: column;
   }
