@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  --azul: #B7E4F9;
+  --azul: #0099b1;
   --verde: #526E2D;
   --marrom: #82491E;
   --amarelo: #FAFD7C;
@@ -12,11 +12,7 @@
   text-transform: uppercase;
 }
 
-body,
-h1,
-p,
-ul,
-li {
+body, h1, p, ul, li {
   margin: 0px;
   padding: 0px;
 }
@@ -24,27 +20,28 @@ li {
 body {
   font-family: "Yomogi", cursive;
   background: var(--preto);
-
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 header {
-  background-color: var(--azul);
+  background-color: var(--preto);
   color: var(--amarelo);
-  height: 300px;
+  height: 250px;
   position: top;
 }
 
-header img {
-  max-width: 1000px;
-}
-.black-line {
-  background-color: var(--preto);
-  height: 12px;
+.blue-line {
+  background-color: var(--azul);
+  height: 8px;
   width: 100%;
 }
-.navbar-top {
+
+.logo {
+  padding-top: 35px;
+}
+
+nav {
   background: var(--amarelo);
   color: var(--preto);
 }
@@ -54,7 +51,7 @@ li {
   padding: 15px;
 }
 
-.navbar-top-item {
+a {
   color: var(--preto);
   font-size: 20px;
   font-weight: 700;
@@ -192,18 +189,22 @@ footer {
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 footer h3 {
   padding: 5px;
   color: var(--preto);
 }
+
 .social-media-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 footer a {
   padding: 5px;
 }
+
 .footer-icon {
   padding: inherit;
   width: 20px;
@@ -211,7 +212,6 @@ footer a {
 }
 
 @media only screen and (max-width: 768px) {
-
   /*For iPads and Tablets:*/
   [class*="col-"] {
     width: 100%;
@@ -232,7 +232,6 @@ footer a {
     justify-content: space-around;
     text-transform: uppercase;
   }
-
   #filter {
     text-align: center;
     justify-content: center;
