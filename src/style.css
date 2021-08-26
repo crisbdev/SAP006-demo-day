@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   box-sizing: border-box;
   --azul: #0099b1;
@@ -6,6 +7,7 @@
   --amarelo: #FAFD7C;
   --branco: #FFFFFF;
   --preto: #000000;
+  font-family: 'Roboto', sans-serif;
 }
 
 .toUpperCase {
@@ -18,7 +20,6 @@ body, h1, p, ul, li {
 }
 
 body {
-  font-family: "Yomogi", cursive;
   background: var(--preto);
   overflow-y: scroll;
   overflow-x: hidden;
@@ -38,16 +39,18 @@ header {
 }
 
 .logo {
-  padding-top: 35px;
+  padding-top: 20px;
 }
 
 nav {
   background: var(--amarelo);
   color: var(--preto);
+  width: 100%;
 }
 
 .navbar {
   background-color: var(--amarelo);
+  width: 100%;
 }
 
 .navbar-list {
@@ -80,6 +83,7 @@ a {
   color: var(--preto);
   font-size: 20px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .flexBox {
@@ -87,16 +91,39 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding: 15px;
 }
 
-/*Inicio da página, foto e texto*/
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulo {
+  margin-top: 4%;
+}
+
+.assista {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.textContentHome {
+  width: 70%;
+  margin-left: 16%;
+}
+
+.textContentCurious {
+  width: 70%;
+  margin-left: 16%;
+  margin-bottom: 15px;
+}
 
 .intro {
   max-width: 100%;
   display: block;
   background-size: cover;
-  padding-top: 40px;
 }
 
 .intro p {
@@ -104,11 +131,19 @@ a {
   text-align: center;
   color: #f8e3b7;
   padding-top: 40px;
-  font-weight: bold;
-  font-size: 21px;
+  font-size: 25px;
 }
 
-/*Estilização dos cards*/
+p {
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #f8e3b7;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
 
 .cards {
   padding: 60px;
@@ -124,7 +159,6 @@ a {
   margin-bottom: 2%;
   background: var(--preto);
   border-radius: 20px;
-  /*box-shadow: 10px 12px 15px var(--azul);*/
   display: flex;
   max-width: 1680px;
   min-width: 450px;
@@ -144,8 +178,6 @@ a {
   padding-top: 40px;
   font-weight: bold;
 }
-
-/*Estilização dos filtros*/
 
 #filter {
   text-align: center;
@@ -186,7 +218,6 @@ option {
 }
 
 input::placeholder {
-  /*para mudar a fonte de dentro da caixa de pesquisa*/
   color: #f8e3b7;
   font-size: 14px;
   text-align: center;
@@ -198,8 +229,6 @@ input::placeholder {
   margin: 12px;
 }
 
-/*Cálculo*/
-
 .calc {
   color: white;
   font-size: 25px;
@@ -209,13 +238,12 @@ input::placeholder {
 footer {
   background-color: var(--amarelo);
   color: var(--amarelo);
-  margin: 0 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-footer h3 {
+footer h4 {
   padding: 5px;
   color: var(--preto);
 }
@@ -226,31 +254,25 @@ footer h3 {
   justify-content: space-between;
 }
 
+.social-media-navbar {
+  text-align: center;
+}
+
+
 footer a {
   padding: 5px;
 }
 
 .footer-icon {
   padding: inherit;
-  width: 20px;
-  height: 20px;
+  width: 30px;
 }
 
-/*
-@media only screen and (max-width: 768px) {
-  [class*="col-"] {
-    width: 100%;
-  }
+iframe {
+  margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 600px) {
-  .intro {
-    background: #3b0273;
-  }
-}
-*/
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 738px) {
   .navbar-list {
     flex-direction: column;
   }
@@ -271,19 +293,5 @@ footer a {
   }
   .navbar-item.show {
     display: inline-block;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .cards {
-    padding: 60px;
-    display: inline;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-transform: uppercase;
-  }
-  #filter {
-    text-align: center;
-    justify-content: center;
   }
 }

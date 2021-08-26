@@ -1,5 +1,3 @@
-
-// Função para Filtrar "Status", "Espécie" e "Gênero"
 export const filterStatus = (charInfo, selectOption, type) => {
     const arrayFiltrado = charInfo.filter(function (character) {
         if (character[type] === selectOption) {
@@ -9,7 +7,6 @@ export const filterStatus = (charInfo, selectOption, type) => {
     return arrayFiltrado
 };
 
-// Função para Ordenar de "A - Z" e de "Z - A"
 export const filterOrder = (charInfo, selectOption) => {
     if (selectOption === "a-z") {
         return charInfo.sort((a, b) => a.name > b.name ? 1 : -1);
@@ -18,7 +15,6 @@ export const filterOrder = (charInfo, selectOption) => {
     }
 }
 
-// Função para filtrar pelo Nome
 export const filterByName = (charInfo, selectOption) => {
     const arrayFilteredByName = charInfo.filter(function (character) {
         if (character.name.toLowerCase().includes(selectOption.toLowerCase())) {
@@ -28,6 +24,5 @@ export const filterByName = (charInfo, selectOption) => {
     return arrayFilteredByName
 }
 
-// Função para exibir porcentagens dos personagens
 export const percentageCalc = (charInfo, selectOption) =>
     parseFloat((selectOption.length * 100) / charInfo.length).toFixed(2);
